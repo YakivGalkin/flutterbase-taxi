@@ -32,7 +32,7 @@ Just replace the API key; make sure Android and iOS Google Map SDKs are enabled
 
 ### Web
 
-Please use CROS proxy for the Google Places / Direction REST API calls.
+Please use CORS proxy for the Google Places / Direction REST API calls.
 
 ## Real life taxi app
 
