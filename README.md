@@ -32,7 +32,7 @@ Just replace the API key; make sure Android and iOS Google Map SDKs are enabled
 
 ### Web
 
-Please use CORS proxy for the Google Places / Direction REST API calls.
+Please use any CORS proxy for the Google Places / Direction REST API calls.
 
 ## Real life taxi app
 
@@ -46,7 +46,7 @@ Most payment gateways require user authorisation on the native bank web ui. Test
 
 ## Thanks
 
-I would like to thank to all the Flutter team and its community for building such amazing technology for developers. I really enjoy working with Flutter & Dart.
+I would like to thank all the Flutter team and its community for building such an amazing technology for developers. I really enjoy working with Flutter & Dart.
 
 ## Get in thought
 
