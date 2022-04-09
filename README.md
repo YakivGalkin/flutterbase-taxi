@@ -7,6 +7,52 @@ A large variety of apps depend on map services. The purpose of this project was 
 https://user-images.githubusercontent.com/100120212/162411043-8621a893-0141-4657-ae9b-4cac77a0fc98.mp4
 
 
+## Real life taxi app
+
+The Real taxi app requires development of a scalable server/cloud side storage and logic, authentication, payments, a much more complex workflow/state management, automated testing and deployment, etc. This is just a proof of concept - the sources of this prototype were not used in the production code.
+
+## Installation instruction
+
+Clone the flutterbase taxi application source code repository:
+
+```
+git clone https://github.com/YakivGalkin/flutterbase-taxi
+cd flutterbase-taxi
+```
+
+Install Flutter dependencies
+
+```
+flutter pub get
+```
+
+### Web
+
+Create Google Cloud API key with the following APIs enabled:
+
+* Maps Javascript API
+* Places API
+* Directions API
+* Geocoding API
+
+Replace the _FLUTTERBASETAXI_API_KEY_ text placeholder with your Google API key in the following files: 
+* /lib/api/google_api.dart
+* /web/index.html
+
+Google Places APIs and Directions API cannot be used in browsers due to the CORS rules violation. As a workaround I deployed a simple CORS proxy server running in the google cloud. Path to this server s sored in 'prodApiProxy' variable declared in the 'lib/api/google_api.dart' file.
+
+
+### Android & iOS
+
+Replace the _FLUTTERBASETAXI_API_KEY_ text placeholder with your Google API key in the /ios and /android project folders, make sure the following APIs are enabled:
+
+
+* Maps SDK for Android
+* Maps SDK for iOS
+* Places API
+* Directions API
+* Geocoding API
+
 
 ## Application Structure
 
@@ -21,7 +67,7 @@ After the state design was finalized, I had most pleasant time coding in Dart la
 
 ## Source Code Documentation
 
-Application structure is fairly straightforward and includes: Providers for the app state, simple wrappers around the Google REST APIs, the standard Flutter GoogleMap widget and the Material UI. That's it. Source code is self explanatory, please refer to standard Flutter documentation. All components are well documented by the Flutter community.
+Application structure is fairly straightforward and includes: Providers for the app state, simple wrappers around the Google REST APIs, the  Flutter GoogleMap widget and the standard Material UI. That's it. Source code is self explanatory, please refer to standard Flutter documentation. All components are well documented by the Flutter community.
 
 Entire UI workflow fitted in just few lines of code located in the 'main.dart' file
 ```dart
@@ -50,21 +96,7 @@ if (currentTrip.isActive) {
 return NewTrip();
 ```
 
-## Installation instruction
-
-Clone this git repository and replace the "FLUTTERBASETAXI_API_KEY" text placeholder with your Google Maps API key.
-
-### Android & iOS
-
-Replace the API key, make sure Android and iOS Google Map SDKs are enabled.
-
-### Web
-
-Use any CORS proxy for the Google Places / Direction REST API calls.
-
-## Real life taxi app
-
-The Real taxi app requires development of a scalable server/cloud side storage and logic, authentication, payments, a much more complex workflow/state management, automated testing and deployment, etc. This is just a proof of concept - the sources of this prototype were not used in the production code.
+## Some hints on further development
 
 Below are some hints that might be helpful if you decide to go further:
 
