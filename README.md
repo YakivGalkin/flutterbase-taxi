@@ -35,16 +35,16 @@ Create Google Cloud API key with the following APIs enabled:
 * Directions API
 * Geocoding API
 
-Replace the _FLUTTERBASETAXI_API_KEY_ text placeholder with your Google API key in the following files: 
-* /lib/api/google_api.dart
-* /web/index.html
+Replace the __FLUTTERBASETAXI_API_KEY__ text placeholder with your Google API key in the following files: 
+* lib/api/google_api.dart
+* web/index.html
 
 Google Places APIs and Directions API cannot be used in browsers due to the CORS rules violation. As a workaround I deployed a simple CORS proxy server running in the google cloud. Path to this server s sored in 'prodApiProxy' variable declared in the 'lib/api/google_api.dart' file.
 
 
 ### Android & iOS
 
-Replace the _FLUTTERBASETAXI_API_KEY_ text placeholder with your Google API key in the /ios and /android project folders, make sure the following APIs are enabled:
+Replace the __FLUTTERBASETAXI_API_KEY__ text placeholder with your Google API key in the /ios/* and /android/* project folders, make sure the following APIs are enabled:
 
 
 * Maps SDK for Android
@@ -111,4 +111,5 @@ I would like to thank the entire Flutter team and its community for building suc
 ## Get in thought
 
 Email me at [hello@flutterbase.com](mailto:hello@flutterbase.com) or find me on [LinkedIn](https://www.linkedin.com/in/yakiv/).
-[www.flutterbase.com](https://flutterbase.com)
+
+### [www.flutterbase.com](https://flutterbase.com)
