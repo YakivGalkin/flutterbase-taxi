@@ -23,6 +23,33 @@ After the state design was finalized, I had most pleasant time coding in Dart la
 
 Application structure is fairly straightforward and includes: Providers for the app state, simple wrappers around the Google REST APIs, the standard Flutter GoogleMap widget and the Material UI. That's it. Source code is self explanatory, please refer to standard Flutter documentation. All components are well documented by the Flutter community.
 
+Entire UI workflow fitted in just few lines of code in the 'main.dart' file
+'''
+// Get Current Location Provider
+final locProvider = LocationProvider.of(context); 
+
+// Get Current Trip Provider
+final currentTrip = TripProvider.of(context);     
+
+// if Current location is not known
+if (!locProvider.isDemoLocationFixed)             
+  // show Location Selection screen     
+  return LocationScaffold();                      
+
+// else if there is an Active Trip
+if (currentTrip.isActive) {       
+  // and if this trip is finished
+  return tripIsFinished(currentTrip.activeTrip!.status)
+      // show Rate the Trip screen 
+      ? tripFinishedScaffold(context)
+     // if not finished - show the trip in progress screen     
+     : ActiveTrip();
+}
+
+// else if there is no active trip - display UI for new trip creation
+return NewTrip();
+'''
+
 ## Installation instruction
 
 Clone this git repository and replace the "FLUTTERBASETAXI_API_KEY" text placeholder with your Google Maps API key.
