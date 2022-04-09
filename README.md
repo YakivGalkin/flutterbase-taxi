@@ -24,7 +24,7 @@ After the state design was finalized, I had most pleasant time coding in Dart la
 Application structure is fairly straightforward and includes: Providers for the app state, simple wrappers around the Google REST APIs, the standard Flutter GoogleMap widget and the Material UI. That's it. Source code is self explanatory, please refer to standard Flutter documentation. All components are well documented by the Flutter community.
 
 Entire UI workflow fitted in just few lines of code in the 'main.dart' file
-'''
+```dart
 // Get Current Location Provider
 final locProvider = LocationProvider.of(context); 
 
@@ -48,7 +48,7 @@ if (currentTrip.isActive) {
 
 // else if there is no active trip - display UI for new trip creation
 return NewTrip();
-'''
+```
 
 ## Installation instruction
 
