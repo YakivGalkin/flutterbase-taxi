@@ -1,52 +1,53 @@
 # Flutterbase taxi
 
-A huge variety of apps depend on map services. The purpose of this project was to test Google Map Services in connection with Flutter on Android, iOS and Web platforms. Here is what i got:
-
-
-https://user-images.githubusercontent.com/100120212/162411043-8621a893-0141-4657-ae9b-4cac77a0fc98.mp4
+A large variety of apps depend on map services. The purpose of this project was to test Google Map Services in connection with Flutter on Android, iOS and Web platforms. Here is what I got:
 
 [Click to open Online Web Demo](https://taxi.flutterbase.com)
 
+https://user-images.githubusercontent.com/100120212/162411043-8621a893-0141-4657-ae9b-4cac77a0fc98.mp4
+
+
+
 ## Application Structure
 
-The reason I love Flutter so much is the beauty of its reactive UI nature. Once you design an application state correctly - the UI development speed becomes something that almost exceeds the speed of light. All in all I spent just a few days on this project starting it from scratch.
+The reason I love Flutter is the beauty of its reactive UI nature. Once you've designed an application state correctly, you can design UI at the speed nearly exceeding the speed of light. Altogether, it took me a few days starting from scratch to completing this project.
 
-The most standard way of keeping application state in Flutter is a Provider pattern.
-Once the key application screens were defined in Figma, the reactive app state structure became obvious.
+The recommended way of keeping application state in Flutter is the Provider Pattern. Once the key application screens were defined in Figma, the reactive app state structure became obvious.
+
 
 ![Application Provider's overview](https://github.com/YakivGalkin/flutterbase-taxi/raw/main/docs/providers_overview.png)
 
-After the state was finalised, nothing could stop me from the most pleasant time - coding in Dart language :)
+After the state design was finalized, I had most pleasant time coding in Dart language :)
 
 ## Source Code Documentation
 
-Application structure is fairly straightforward - Providers for the app state, simple wrappers on the Google REST APIs, the standard Flutter GoogleMap widget and the Material UI. That's it. Source code is self explanatory, please address all issues to standard flutter documentation. All of the components are well documented by the Flutter community.
+Application structure is fairly straightforward and includes: Providers for the app state, simple wrappers around the Google REST APIs, the standard Flutter GoogleMap widget and the Material UI. That's it. Source code is self explanatory, please refer to standard Flutter documentation. All components are well documented by the Flutter community.
 
 ## Installation instruction
 
-Clone this git repository and replace the "_FLUTTERBASETAXI_API_KEY_" text placeholder with your Google Maps API key
+Clone this git repository and replace the "FLUTTERBASETAXI_API_KEY" text placeholder with your Google Maps API key.
 
 ### Android & iOS
 
-Just replace the API key; make sure Android and iOS Google Map SDKs are enabled
+Replace the API key, make sure Android and iOS Google Map SDKs are enabled.
 
 ### Web
 
-Please use any CORS proxy for the Google Places / Direction REST API calls.
+Use any CORS proxy for the Google Places / Direction REST API calls.
 
 ## Real life taxi app
 
-The Real taxi app requires development of a scalable server/cloud side storage and logic, authentication, payments, much more complex workflow/state management, automated testing and deployment, etc. After all, you will probably notice that no sources from this prototype become a part of a production code.
+The Real taxi app requires development of a scalable server/cloud side storage and logic, authentication, payments, a much more complex workflow/state management, automated testing and deployment, etc. This is just a proof of concept - the sources of this prototype were not used in the production code.
 
 Below are some hints that might be helpful if you decide to go further:
 
-Make sure you can efficiently handle GEO queries on the server side. Google Firestore requires some workarounds to do it properly.
+Make sure you can efficiently handle GEO queries on the server side. Google Firestore requires some workarounds to use it properly.
 
-Most payment gateways require user authorisation on the native bank web ui. Test if you can integrate it with the Flutter Web View or Flutter deep links callback.
+Most payment gateways require user authorization on the native bank web UI. Test if you can integrate it with the Flutter Web View or Flutter deep links callback.
 
 ## Thanks
 
-I would like to thank all the Flutter team and its community for building such an amazing technology for developers. I really enjoy working with Flutter & Dart.
+I would like to thank the entire Flutter team and its community for building such an amazing technology for developers. I really enjoy working with Flutter & Dart.
 
 ## Get in thought
 
