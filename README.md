@@ -2,10 +2,11 @@
 
 A large variety of apps depend on map services. The purpose of this project was to test Google Map Services in connection with Flutter on Android, iOS and Web platforms. Here is what I got:
 
-[Click to open Online Web Demo](https://taxi.flutterbase.com)
 
 ![App Demo Images](https://github.com/YakivGalkin/flutterbase-taxi/raw/main/docs/taxi_demo_image.png)
 
+
+### [Click to open Online Web Demo](https://taxi.flutterbase.com)
 
 ## Real life taxi app
 
