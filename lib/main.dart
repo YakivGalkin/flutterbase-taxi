@@ -37,15 +37,28 @@ void main() => runApp(MultiProvider(
               builder: (context, child) => TouchIndicator(child: child!),
               home: Builder(
                 builder: (ctx) {
-                  final locProvider = LocationProvider.of(ctx);
-                  final currentTrip = TripProvider.of(ctx);
+                  // Get Current Location Provider
+                  final locProvider = LocationProvider.of(context);
+
+                  // Get Current Trip Provider
+                  final currentTrip = TripProvider.of(context);
+
+                  // if Current location is not known
                   if (!locProvider.isDemoLocationFixed)
+                    // show Location Selection screen
                     return LocationScaffold();
+
+                  // else if there is an Active Trip
                   if (currentTrip.isActive) {
+                    // and if this trip is finished
                     return tripIsFinished(currentTrip.activeTrip!.status)
-                        ? tripFinishedScaffold(ctx)
+                        // show Rate the Trip screen
+                        ? tripFinishedScaffold(context)
+                        // if not finished - show the trip in progress screen
                         : ActiveTrip();
                   }
+
+                  // else if there is no active trip - display UI for new trip creation
                   return NewTrip();
                 },
               ))),
