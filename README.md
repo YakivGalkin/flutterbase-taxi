@@ -4,7 +4,7 @@ A large variety of apps depend on map services. The purpose of this project was 
 
 [Click to open Online Web Demo](https://taxi.flutterbase.com)
 
-https://user-images.githubusercontent.com/100120212/162411043-8621a893-0141-4657-ae9b-4cac77a0fc98.mp4
+![App Demo Images](https://github.com/YakivGalkin/flutterbase-taxi/raw/main/docs/taxi_demo_image.png)
 
 
 ## Real life taxi app
