@@ -19,24 +19,24 @@ final _googleApiHeaders = {"x-ios-bundle-identifier": _appleBundleId};
 
 final prodApiProxy =
     "https://europe-west2-flutterbasedotcom.cloudfunctions.net/FlutterbaseTaxiWebDemo";
-final googleApiProxi = "$prodApiProxy/__https__/maps.googleapis.com/maps/api";
+final googleApiProxy = "$prodApiProxy/__https__/maps.googleapis.com/maps/api";
 
 final apiGooglePlaces = GoogleMapsPlaces(
   apiKey: _googleMapsApiKey,
   // apiHeaders: _googleApiHeaders,
-  baseUrl: googleApiProxi,
+  baseUrl: googleApiProxy,
 );
 
 final apiGeocoding = GoogleMapsGeocoding(
   apiKey: _googleMapsApiKey,
   //apiHeaders: _googleApiHeaders,
-  baseUrl: googleApiProxi,
+  baseUrl: googleApiProxy,
 );
 
 final apiDirections = dir.GoogleMapsDirections(
   apiKey: _googleMapsApiKey,
   //apiHeaders: _googleApiHeaders,
-  baseUrl: googleApiProxi,
+  baseUrl: googleApiProxy,
 );
 
 List<LatLng>? createPolylinePointsFromDirections(
