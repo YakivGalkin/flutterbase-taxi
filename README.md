@@ -111,6 +111,6 @@ I would like to thank the entire Flutter team and its community for building suc
 
 ## Get in thought
 
-Email me at [hello@flutterbase.com](mailto:hello@flutterbase.com) or find me on [LinkedIn](https://www.linkedin.com/in/yakiv/).
+Flutter enthusiasts, you are welcome to connect with me on [LinkedIn](https://www.linkedin.com/in/yakiv/) or email me at: [hello@flutterbase.com](mailto:hello@flutterbase.com)
 
-### [www.flutterbase.com](https://flutterbase.com)
+
