@@ -111,7 +111,7 @@ I would like to thank the entire Flutter team and its community for building suc
 
 ## Get in thought
 
-Calling all Flutter enthusiasts - connect me on [LinkedIn](https://www.linkedin.com/in/yakiv/) :)
+Calling all Flutter enthusiasts - connect me on [LinkedIn](https://www.linkedin.com/in/yakivgalkin/) :)
 
 
 
